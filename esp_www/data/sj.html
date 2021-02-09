@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务器运行时间</title>
+    <style>
+  body {
+
+  background: #333;
+  color: #fee;
+  font-size: 3em;
+  font-family: 'Open Sans';
+
+}
+
+.wrap {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.anaglyph {
+  text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+}
+    
+    </style>
+</head>
+<body>
+        <div class="wrap">
+        <p class="anaglyph">本服务集成在ESP8266中</p>
+        <p class="anaglyph">目前已经工作</p>
+        <span class="anaglyph" id="site_runtime" ></span>
+        <P></P>
+
+     
+      </div>
+      
+</body>
+<script type="text/javascript">
+    function show_site_runtime(){
+	window.setTimeout("show_site_runtime()",1000); 
+	X=new Date("02/09/2021 21:34:00"); 
+	Y=new Date();
+	T=(Y.getTime()-X.getTime()); 
+	i=24*60*60*1000;
+	d=T/i;
+	D=Math.floor(d);
+	h=(d-D)*24;
+	H=Math.floor(h); 
+	m=(h-H)*60;
+	M=Math.floor(m); 
+	s=(m-M)*60
+	S=Math.floor(s);
+	site_runtime.innerHTML= D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 "
+    }
+	show_site_runtime();
+</script>
+</html>
