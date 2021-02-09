@@ -1,6 +1,6 @@
 # ESP_WWW
 基于esp8266的万维网个人网站模板
-# 演示及教程视频：
+# 演示及教程视频：https://www.bilibili.com/video/BV1Rr4y1K7FC/
 # 相关说明 
 * 本项目需要 wifi_link_tool库 
 * 需要使用文件系统
